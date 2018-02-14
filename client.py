@@ -4,9 +4,9 @@ HOST = '172.19.74.136'
 PORT = 8089
 ADDR = (HOST,PORT)
 BUFSIZE = 4096
-videofile = "/root/ekta/video/Demo_video.mp4"
+videoclip = "/root/ekta/video/Demo_video.mp4"
 
-bytes = open(videofile).read()
+bytes = open(videoclip).read()
 
 print len(bytes)
 
