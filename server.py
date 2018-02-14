@@ -5,15 +5,15 @@ PORT = 8089
 ADDR = (HOST,PORT)
 BUFSIZE = 4096
 
-serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-serv.bind(ADDR)
-serv.listen(5)
+server.bind(ADDR)
+server.listen(5)
 
 print 'listening ...'
 
 while True:
-    conn, addr = serv.accept()
+    conn, addr = server.accept()
     print 'client connected ... ', addr
     myfile = open('out.mp4', 'w')
     
