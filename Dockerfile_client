@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
+COPY . /app
+WORKDIR /app
+COPY  "/root/ekta/video/Demo_video.mp4" "/root/ekta/video/Demo_video.mp4"  
+ENTRYPOINT ["python"]
+CMD ["client.py"]
